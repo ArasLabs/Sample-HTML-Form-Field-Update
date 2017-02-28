@@ -1,0 +1,53 @@
+<AML>
+ <Item type="Form" id="5DA06BB7FC4844E8BD8024A0935320C9" action="edit">
+  <Relationships>
+   <Item type="Body" id="E354E4F38711436CB90DA282B6E7BB4D" action="edit">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Project Template" type="Form">5DA06BB7FC4844E8BD8024A0935320C9</source_id>
+    <Relationships>
+     <Item type="Field" id="98B7D85CDB1A484393D51F44B0B7E686" action="edit">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>10pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<script>
+if(document.item)
+{
+  var str = '<span id="project_state" style="text-transform:capitalize; font-family:arial, helvetica, sans-serif; font-size:10pt; font-weight:bold; color:#000000; text-align:left;">Status : ';
+  str += top.aras.getItemProperty(document.item, 'state');
+  str += '</span>';
+  document.write(str);
+}
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2304</sort_order>
+      <source_id keyed_name="E354E4F38711436CB90DA282B6E7BB4D" type="Body">E354E4F38711436CB90DA282B6E7BB4D</source_id>
+      <tab_index>1920</tab_index>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>8</x>
+      <y>96</y>
+      <name>state</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Form Event" id="26CF3C0CFEF74DE4BBC53E0FD09F7500" action="add">
+	<form_event>onformpopulated</form_event>
+	<related_id keyed_name="labs_updateHTMLOnFormPopulate" type="Method">
+	 <Item type="Method" action="get" select="id">
+	  <name>labs_updateHTMLOnFormPopulate</name>
+	 </Item>
+	</related_id>
+	<sort_order>128</sort_order>
+	<source_id keyed_name="Project Template" type="Form">5DA06BB7FC4844E8BD8024A0935320C9</source_id>
+ </Item>
+</AML>
