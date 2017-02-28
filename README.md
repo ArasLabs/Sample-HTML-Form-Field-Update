@@ -1,4 +1,4 @@
-# Refresh Form Field on Load Sample
+# Refresh Form HTML Field on Load Sample
 
 Some forms contain HTML fields that do not refresh on actions like save. That is because these fields reference Item properties, and do not actually point to them.
 
